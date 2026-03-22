@@ -1,14 +1,14 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const cors = require('cors');                        
+const cors = require('cors');
 const authRoutes = require('./routes/auth.routes');
 const musicRoutes = require('./routes/music.routes');
 
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173',   
-    credentials: true                  
+    origin: 'https://music-streaming-frontend-ivory.vercel.app',  // ← update this
+    credentials: true
 }));
 
 app.use(express.json());
